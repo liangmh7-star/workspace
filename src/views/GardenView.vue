@@ -46,14 +46,14 @@ const selectSeed = (seedId) => {
 
 const getImgPath = (imgName) => {
   if (!imgName) return ''
-  if (imgName.startsWith('/assets/')) return imgName
-  return `/assets/${imgName}`
+  if (imgName.startsWith('./assets/')) return imgName
+  return `./assets/${imgName}`
 }
 
 const getSeedImage = (plantId) => {
-  if (!plantId) return '/assets/seed_bag.png'
+  if (!plantId) return './assets/seed_bag.png'
   const seedDef = store.itemDefs[plantId]
-  if (!seedDef) return '/assets/seed_bag.png'
+  if (!seedDef) return './assets/seed_bag.png'
   return getImgPath(seedDef.img)
 }
 
@@ -64,7 +64,7 @@ const getPlantImage = (plantId) => {
   
   // Mystery seed shows question mark during growth
   if (seedDef.isMystery) {
-    return '/assets/seed_mystery.png'
+    return './assets/seed_mystery.png'
   }
   
   const outputId = seedDef.output
@@ -90,7 +90,7 @@ const handleNextDay = () => {
 </script>
 
 <template>
-  <div class="garden-view" :style="{ backgroundImage: `url(/assets/hometown_bg.png)` }">
+  <div class="garden-view" :style="{ backgroundImage: `url(./assets/hometown_bg.png)` }">
     <!-- Top Bar: Day Info & Farming Counter & Buff -->
     <div class="top-bar">
       <div class="day-info">
@@ -174,7 +174,7 @@ const handleNextDay = () => {
           >
             <!-- Check if it is a seed and has count > 0 -->
             <div v-if="store.itemDefs[id]?.type === 'seed' && count > 0" class="seed-item" @click="selectSeed(id)">
-              <img src="/assets/seed_bag.png" width="40" />
+              <img :src="getImgPath('seed_bag.png')" width="40" />
               <span>{{ store.itemDefs[id].name }}</span>
               <span class="count">x{{ count }}</span>
             </div>

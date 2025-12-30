@@ -30,7 +30,7 @@
 
     <!-- Reading Interface -->
     <div v-else class="reading-interface" @click="nextDialogue">
-      <img src="/assets/treehouse_scene.png" class="bg-blur" />
+      <img :src="'./assets/treehouse_scene.png'" class="bg-blur" />
       
       <!-- NPC Portrait -->
       <div class="npc-container" v-if="currentPortrait">
@@ -74,7 +74,7 @@ const currentPortrait = computed(() => {
   // Speaker might be "Alex", "Sebastian", "Haley"
   const npcKey = Object.keys(npcStore.npcs).find(key => npcStore.npcs[key].name === speaker)
   if (npcKey) {
-      return `/assets/${npcStore.npcs[npcKey].portrait}`
+      return `./assets/${npcStore.npcs[npcKey].portrait}`
   }
   
   // Grandpa?

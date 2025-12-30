@@ -74,8 +74,8 @@ const getImgPath = (itemId) => {
   const def = store.itemDefs[itemId]
   if (!def) return ''
   let imgName = def.img || `${itemId}.png`
-  if (imgName.startsWith('/assets/')) return imgName
-  return `/assets/${imgName}`
+  if (imgName.startsWith('./assets/')) return imgName
+  return `./assets/${imgName}`
 }
 
 const getCurrentPrice = (cropId) => {

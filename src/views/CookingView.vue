@@ -120,7 +120,7 @@ const recipeList = [
   {
     id: 'dish_tomato_radish',
     name: '茄汁萝卜',
-    img: '/assets/dish_tomato_radish.png',
+    img: './assets/dish_tomato_radish.png',
     ingredients: [
       { id: 'crop_turnip' },
       { id: 'crop_tomato' }
@@ -129,7 +129,7 @@ const recipeList = [
   {
     id: 'dish_potato_shreds',
     name: '酸甜土豆丝',
-    img: '/assets/dish_potato_shreds.png',
+    img: './assets/dish_potato_shreds.png',
     ingredients: [
       { id: 'crop_potato' },
       { id: 'crop_tomato' }
@@ -138,7 +138,7 @@ const recipeList = [
   {
     id: 'dish_chili_corn',
     name: '红油玉米',
-    img: '/assets/dish_chili_corn.png',
+    img: './assets/dish_chili_corn.png',
     ingredients: [
       { id: 'crop_tomato' },
       { id: 'crop_corn' }
@@ -147,7 +147,7 @@ const recipeList = [
   {
     id: 'dish_pumpkin_paste',
     name: '甜甜南瓜泥',
-    img: '/assets/dish_pumpkin_paste.png',
+    img: './assets/dish_pumpkin_paste.png',
     ingredients: [
       { id: 'crop_tomato' },
       { id: 'crop_pumpkin' }
@@ -180,7 +180,7 @@ function selectRecipe(recipe) {
 function getImgPath(itemId) {
   const def = store.itemDefs[itemId]
   if (!def) return ''
-  return def.img || `/assets/${itemId}.png`
+  return def.img || `./assets/${itemId}.png`
 }
 
 function hasIngredient(itemId) {

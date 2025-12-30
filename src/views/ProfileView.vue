@@ -203,9 +203,9 @@ function selectDishToGift(dishId) {
 }
 
 function getImgPath(filename) {
-  if (!filename) return '/assets/icons.png'
-  if (filename.startsWith('/assets/')) return filename
-  return `/assets/${filename}`
+  if (!filename) return './assets/icons.png'
+  if (filename.startsWith('./assets/')) return filename
+  return `./assets/${filename}`
 }
 
 function triggerEvent(npcId, level) {

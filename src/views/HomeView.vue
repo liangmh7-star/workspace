@@ -6,7 +6,7 @@
        @mouseup="handleDragEnd"
        @mouseleave="handleDragEnd">
     <!-- Background -->
-    <img src="/assets/treehouse_scene.png" class="background" alt="Home" draggable="false" />
+    <img :src="'./assets/treehouse_scene.png'" class="background" alt="Home" draggable="false" />
 
     <!-- Placed Furniture -->
     <div 
@@ -109,7 +109,7 @@ const furnitureInventory = computed(() => {
 function getImgPath(itemId) {
   const img = gameStore.itemDefs[itemId]?.img
   // Fallback to avoid empty src
-  return img ? img : '/assets/furniture_chair.png'
+  return img ? img : './assets/furniture_chair.png'
 }
 
 function getClientCoords(e) {

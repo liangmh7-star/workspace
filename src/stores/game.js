@@ -224,44 +224,44 @@ export const useGameStore = defineStore('game', () => {
   // Definitions
   const itemDefs = {
     // Seeds & Vegetables
-    'seed_turnip': { name: '白萝卜种子', type: 'seed', growTime: 10, output: 'crop_turnip', cost: 10, img: '/assets/seed_bag.png', unlockLevel: 1 },
-    'seed_potato': { name: '金土豆种子', type: 'seed', growTime: 20, output: 'crop_potato', cost: 15, img: '/assets/seed_bag.png', unlockLevel: 1 },
-    'seed_tomato': { name: '红番茄种子', type: 'seed', growTime: 30, output: 'crop_tomato', cost: 20, img: '/assets/seed_bag.png', unlockLevel: 2 },
-    'seed_corn': { name: '甜玉米种子', type: 'seed', growTime: 40, output: 'crop_corn', cost: 25, img: '/assets/seed_bag.png', unlockLevel: 5 },
-    'seed_pumpkin': { name: '大南瓜种子', type: 'seed', growTime: 60, output: 'crop_pumpkin', cost: 40, img: '/assets/seed_bag.png', unlockLevel: 7 },
-    'seed_mystery': { name: '神秘种子', type: 'seed', growTime: 25, output: 'mystery', cost: 10, img: '/assets/seed_mystery.png', unlockLevel: 1, isMystery: true },
+    'seed_turnip': { name: '白萝卜种子', type: 'seed', growTime: 10, output: 'crop_turnip', cost: 10, img: './assets/seed_bag.png', unlockLevel: 1 },
+    'seed_potato': { name: '金土豆种子', type: 'seed', growTime: 20, output: 'crop_potato', cost: 15, img: './assets/seed_bag.png', unlockLevel: 1 },
+    'seed_tomato': { name: '红番茄种子', type: 'seed', growTime: 30, output: 'crop_tomato', cost: 20, img: './assets/seed_bag.png', unlockLevel: 2 },
+    'seed_corn': { name: '甜玉米种子', type: 'seed', growTime: 40, output: 'crop_corn', cost: 25, img: './assets/seed_bag.png', unlockLevel: 5 },
+    'seed_pumpkin': { name: '大南瓜种子', type: 'seed', growTime: 60, output: 'crop_pumpkin', cost: 40, img: './assets/seed_bag.png', unlockLevel: 7 },
+    'seed_mystery': { name: '神秘种子', type: 'seed', growTime: 25, output: 'mystery', cost: 10, img: './assets/seed_mystery.png', unlockLevel: 1, isMystery: true },
     
-    'crop_turnip': { name: '白萝卜', type: 'crop', sellPrice: 20, img: '/assets/crop_turnip_transparent.png' },
-    'crop_potato': { name: '金土豆', type: 'crop', sellPrice: 35, img: '/assets/crop_potato_transparent.png' },
-    'crop_tomato': { name: '红番茄', type: 'crop', sellPrice: 50, img: '/assets/crop_tomato_transparent_transparent.png' },
-    'crop_corn': { name: '甜玉米', type: 'crop', sellPrice: 65, img: '/assets/crop_corn_transparent.png' },
-    'crop_pumpkin': { name: '大南瓜', type: 'crop', sellPrice: 100, img: '/assets/crop_pumpkin_transparent.png' },
+    'crop_turnip': { name: '白萝卜', type: 'crop', sellPrice: 20, img: './assets/crop_turnip_transparent.png' },
+    'crop_potato': { name: '金土豆', type: 'crop', sellPrice: 35, img: './assets/crop_potato_transparent.png' },
+    'crop_tomato': { name: '红番茄', type: 'crop', sellPrice: 50, img: './assets/crop_tomato_transparent_transparent.png' },
+    'crop_corn': { name: '甜玉米', type: 'crop', sellPrice: 65, img: './assets/crop_corn_transparent.png' },
+    'crop_pumpkin': { name: '大南瓜', type: 'crop', sellPrice: 100, img: './assets/crop_pumpkin_transparent.png' },
     
     // Mystery seed outputs
-    'crop_weed': { name: '杂草', type: 'crop', sellPrice: 1, img: '/assets/crop_weed.png' },
-    'crop_golden_apple': { name: '金苹果', type: 'crop', sellPrice: 500, img: '/assets/crop_golden_apple.png' },
+    'crop_weed': { name: '杂草', type: 'crop', sellPrice: 1, img: './assets/crop_weed.png' },
+    'crop_golden_apple': { name: '金苹果', type: 'crop', sellPrice: 500, img: './assets/crop_golden_apple.png' },
     
     // Dishes (cooked food)
-    'dish_tomato_radish': { name: '茄汁萝卜', type: 'dish', img: '/assets/dish_tomato_radish.png' },
-    'dish_potato_shreds': { name: '酸甜土豆丝', type: 'dish', img: '/assets/dish_potato_shreds.png' },
-    'dish_chili_corn': { name: '红油玉米', type: 'dish', img: '/assets/dish_chili_corn.png' },
-    'dish_pumpkin_paste': { name: '甜甜南瓜泥', type: 'dish', img: '/assets/dish_pumpkin_paste.png' },
+    'dish_tomato_radish': { name: '茄汁萝卜', type: 'dish', img: './assets/dish_tomato_radish.png' },
+    'dish_potato_shreds': { name: '酸甜土豆丝', type: 'dish', img: './assets/dish_potato_shreds.png' },
+    'dish_chili_corn': { name: '红油玉米', type: 'dish', img: './assets/dish_chili_corn.png' },
+    'dish_pumpkin_paste': { name: '甜甜南瓜泥', type: 'dish', img: './assets/dish_pumpkin_paste.png' },
     
     // Furniture
-    'furniture_chair': { name: '木制花园椅', type: 'furniture', cost: 100, score: 10, img: '/assets/furniture_chair.png', unlockLevel: 1 },
-    'furniture_lamp': { name: '复古路灯', type: 'furniture', cost: 150, score: 15, img: '/assets/furniture_lamp.png', unlockLevel: 1 },
-    'furniture_bookshelf': { name: '木质书架', type: 'furniture', cost: 300, score: 30, img: '/assets/furniture_bookshelf_transparent_transparent.png', unlockLevel: 3 },
-    'furniture_rug': { name: '圆形地毯', type: 'furniture', cost: 200, score: 20, img: '/assets/furniture_rug_transparent_transparent.png', unlockLevel: 3 },
-    'furniture_potted_plant': { name: '大型绿植', type: 'furniture', cost: 350, score: 35, img: '/assets/furniture_plant_new_transparent.png', unlockLevel: 4 },
-    'furniture_sofa': { name: '舒适沙发', type: 'furniture', cost: 500, score: 50, img: '/assets/furniture_sofa_v15_final_transparent.png', unlockLevel: 5 },
-    'furniture_table_lamp': { name: '复古台灯', type: 'furniture', cost: 400, score: 40, img: '/assets/furniture_table_lamp_new_transparent.png', unlockLevel: 6 },
-    'furniture_wooden_desk': { name: '木质书桌', type: 'furniture', cost: 600, score: 60, img: '/assets/furniture_wooden_desk_new_transparent.png', unlockLevel: 5 },
-    'furniture_hanging_painting': { name: '风景挂画', type: 'furniture', cost: 250, score: 25, img: '/assets/furniture_painting_v13_final.png', unlockLevel: 6 },
-    'furniture_fireplace': { name: '复古壁炉', type: 'furniture', cost: 800, score: 80, img: '/assets/furniture_fireplace_transparent_transparent.png', unlockLevel: 7 },
-    'furniture_retro_tv': { name: '电视机', type: 'furniture', cost: 1200, score: 85, img: '/assets/furniture_tv_painting_v16_transparent.png', unlockLevel: 8 },
-    'furniture_clock': { name: '落地摆钟', type: 'furniture', cost: 900, score: 90, img: '/assets/furniture_clock_transparent_transparent.png', unlockLevel: 8 },
-    'furniture_full_length_mirror': { name: '穿衣镜', type: 'furniture', cost: 1000, score: 100, img: '/assets/furniture_full_length_mirror_transparent_transparent.png', unlockLevel: 9 },
-    'furniture_cozy_bed': { name: '舒适大床', type: 'furniture', cost: 1500, score: 120, img: '/assets/furniture_cozy_bed_transparent.png', unlockLevel: 10 }
+    'furniture_chair': { name: '木制花园椅', type: 'furniture', cost: 100, score: 10, img: './assets/furniture_chair.png', unlockLevel: 1 },
+    'furniture_lamp': { name: '复古路灯', type: 'furniture', cost: 150, score: 15, img: './assets/furniture_lamp.png', unlockLevel: 1 },
+    'furniture_bookshelf': { name: '木质书架', type: 'furniture', cost: 300, score: 30, img: './assets/furniture_bookshelf_transparent_transparent.png', unlockLevel: 3 },
+    'furniture_rug': { name: '圆形地毯', type: 'furniture', cost: 200, score: 20, img: './assets/furniture_rug_transparent_transparent.png', unlockLevel: 3 },
+    'furniture_potted_plant': { name: '大型绿植', type: 'furniture', cost: 350, score: 35, img: './assets/furniture_plant_new_transparent.png', unlockLevel: 4 },
+    'furniture_sofa': { name: '舒适沙发', type: 'furniture', cost: 500, score: 50, img: './assets/furniture_sofa_v15_final_transparent.png', unlockLevel: 5 },
+    'furniture_table_lamp': { name: '复古台灯', type: 'furniture', cost: 400, score: 40, img: './assets/furniture_table_lamp_new_transparent.png', unlockLevel: 6 },
+    'furniture_wooden_desk': { name: '木质书桌', type: 'furniture', cost: 600, score: 60, img: './assets/furniture_wooden_desk_new_transparent.png', unlockLevel: 5 },
+    'furniture_hanging_painting': { name: '风景挂画', type: 'furniture', cost: 250, score: 25, img: './assets/furniture_painting_v13_final.png', unlockLevel: 6 },
+    'furniture_fireplace': { name: '复古壁炉', type: 'furniture', cost: 800, score: 80, img: './assets/furniture_fireplace_transparent_transparent.png', unlockLevel: 7 },
+    'furniture_retro_tv': { name: '电视机', type: 'furniture', cost: 1200, score: 85, img: './assets/furniture_tv_painting_v16_transparent.png', unlockLevel: 8 },
+    'furniture_clock': { name: '落地摆钟', type: 'furniture', cost: 900, score: 90, img: './assets/furniture_clock_transparent_transparent.png', unlockLevel: 8 },
+    'furniture_full_length_mirror': { name: '穿衣镜', type: 'furniture', cost: 1000, score: 100, img: './assets/furniture_full_length_mirror_transparent_transparent.png', unlockLevel: 9 },
+    'furniture_cozy_bed': { name: '舒适大床', type: 'furniture', cost: 1500, score: 120, img: './assets/furniture_cozy_bed_transparent.png', unlockLevel: 10 }
   }
 
   // Story Content - Updated with "Time Capsule" Coherent Storyline (Lv 10/20/30)
